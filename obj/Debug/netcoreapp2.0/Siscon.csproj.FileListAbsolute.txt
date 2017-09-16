@@ -1,0 +1,11 @@
+D:\Projetos\Siscon\bin\Debug\netcoreapp2.0\Siscon.deps.json
+D:\Projetos\Siscon\bin\Debug\netcoreapp2.0\Siscon.runtimeconfig.json
+D:\Projetos\Siscon\bin\Debug\netcoreapp2.0\Siscon.runtimeconfig.dev.json
+D:\Projetos\Siscon\bin\Debug\netcoreapp2.0\Siscon.dll
+D:\Projetos\Siscon\bin\Debug\netcoreapp2.0\Siscon.pdb
+D:\Projetos\Siscon\obj\Debug\netcoreapp2.0\Siscon.csproj.CoreCompileInputs.cache
+D:\Projetos\Siscon\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Projetos\Siscon\obj\Debug\netcoreapp2.0\Siscon.AssemblyInfoInputs.cache
+D:\Projetos\Siscon\obj\Debug\netcoreapp2.0\Siscon.AssemblyInfo.cs
+D:\Projetos\Siscon\obj\Debug\netcoreapp2.0\Siscon.dll
+D:\Projetos\Siscon\obj\Debug\netcoreapp2.0\Siscon.pdb
