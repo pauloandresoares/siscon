@@ -196,8 +196,8 @@ dotnet ef database update
 dotnet aspnet-codegenerator controller  -name PersonController --model Sisdem.Models.Person --dataContext Sisdem.Context.SisdemDBContext --relativeFolderPath Controllers --useDefaultLayout
 ``` 
 **17 - Modificar o arquivo _Layout.cshtml**
-``` 
-//e adicionar o link                     
+```html 
+<!-- e adicionar o link: -->
 <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
 ``` 
 
