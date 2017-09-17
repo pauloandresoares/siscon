@@ -1,0 +1,12 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=aspnet-Siscon-7A38858E-D5FA-423C-A65D-ADEB3826BCEC;Trusted_Connection=True;MultipleActiveResultSets=true",
+    "SisconDBContext": "User ID=postgres; Password=abcd1234; Host=localhost; Port=5432; Database=Siscon"
+  },
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  }
+}
