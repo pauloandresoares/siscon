@@ -1,8 +1,8 @@
-# AplicaÁ„o para estudo do .NET CORE
+# Aplica√ß√£o para estudo do .NET CORE
 
 # Criar
 **1 - Criar o projeto**
-Se n„o definir o nome do projeto ele ir· pegar o diretÛrio atual
+Se n√£o definir o nome do projeto ele ir√° pegar o diret√≥rio atual
 ```sh
 dotnet new mvc <name> 
 ```
@@ -12,7 +12,7 @@ dotnet new mvc <name>
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Tools
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 ```
-Caso no arquivo do projeto .csproj n„o tiver a linha abaixo, adiciona-la:
+Caso no arquivo do projeto .csproj n√£o tiver a linha abaixo, adiciona-la:
 ```
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
@@ -28,7 +28,7 @@ dotnet restore
 dotnet build 
 ```
 **5 - Gerar uma controller:**
-… importante informar a opÁ„o "--relativeFolderPath Controllers" pq caso contrario ele ir· gera na raiz do projeto
+√â importante informar a op√ß√£o "--relativeFolderPath Controllers" pq caso contrario ele ir√° gera na raiz do projeto
 ```
 dotnet aspnet-codegenerator controller  -name <Nome da Controller. Ex.: OrderController> --relativeFolderPath Controllers
 ```
@@ -36,16 +36,16 @@ dotnet aspnet-codegenerator controller  -name <Nome da Controller. Ex.: OrderCon
 ```
 dotnet aspnet-codegenerator view <Nome> <tipo: Empty|Create|Edit|Delete|Details|List> -m <Model> --relativeFolderPath Views\Order  --useDefaultLayout
 ```
-O -m dever· ser utilizado quando vc precisar utilizar um modelo. Por exemplo uma p·gina de listagem.
+O -m dever√° ser utilizado quando vc precisar utilizar um modelo. Por exemplo uma p√°gina de listagem.
 
 | Tipo |  |
 | ------ | ------ |
-| Empty | P·gina vazia |
-| Create | Pagina com um formul·rio de cadastro |
-| Edit |  Pagina com um formul·rio de ediÁ„o |
-| Delete | P·gina de exclus„o |
-| Details | P·gina de detalhes |
-| List | P·gina de listagem |
+| Empty | P√°gina vazia |
+| Create | Pagina com um formul√°rio de cadastro |
+| Edit |  Pagina com um formul√°rio de edi√ß√£o |
+| Delete | P√°gina de exclus√£o |
+| Details | P√°gina de detalhes |
+| List | P√°gina de listagem |
 
 **7 - Instalar o Entity Framework Core e as suas dependencias**
 Instalar o Entity Framework Core:
@@ -62,7 +62,7 @@ Instalar o provider o Postgres SQL:
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 ```
 
-Pacote para facilitar a migraÁ„o utilizando o provider do Postgres SQL:
+Pacote para facilitar a migra√ß√£o utilizando o provider do Postgres SQL:
 ```
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL.Design
 ```
@@ -76,7 +76,7 @@ Abra o arquivo <Nome do Projeto>.csproj e adicione a seguinte linha:
 <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
 ```
 Para ficar dessa forma:
-```
+```xml
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
@@ -96,7 +96,7 @@ Para ficar dessa forma:
   </ItemGroup>	
 ```  
 
-**9 -  Caso n„o exista a pasta Models na raiz do projeto criar e criar a classe como exemplo**
+**9 -  Caso n√£o exista a pasta Models na raiz do projeto criar e criar a classe como exemplo**
 ```csharp
 // Models/Person.cs
 namespace Sisdem.Models
@@ -183,11 +183,11 @@ public void ConfigureServices(IServiceCollection services)
 	// --> Fim
 }
 ```   
-**14 - Fazer uma migraÁ„o**	
+**14 - Fazer uma migra√ß√£o**	
 ``` 
 dotnet ef migrations add create_person
 ``` 
-**15 - Executar uma migraÁ„o**
+**15 - Executar uma migra√ß√£o**
 ``` 
 dotnet ef database update
 ``` 
@@ -202,4 +202,4 @@ dotnet aspnet-codegenerator controller  -name PersonController --model Sisdem.Mo
 <li><a asp-area="" asp-controller="Person" asp-action="Index">Person</a></li>
 ``` 
 
-# AutenticaÁ„o
+# Autentica√ß√£o
