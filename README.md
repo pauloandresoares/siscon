@@ -97,7 +97,7 @@ Para ficar dessa forma:
 ```  
 
 **9 -  Caso não exista a pasta Models na raiz do projeto criar e criar a classe como exemplo**
-```
+```csharp
 // Models/Person.cs
 namespace Sisdem.Models
 {
@@ -125,7 +125,7 @@ namespace Sisdem.Models
 ``` 
 
 **11 - Criar o aqruivo DBContext :**
-``` 
+```csharp 
 //SisdemDBContext:
 
 using Microsoft.EntityFrameworkCore;
@@ -147,7 +147,7 @@ namespace Sisdem.Context
 ```
 
 **12 - Modificar o arquivo appsettings.json**
-``` 
+```json 
 {
   "Logging": {
     "IncludeScopes": false,
@@ -163,12 +163,12 @@ namespace Sisdem.Context
 ``` 
 **13 - Modificar a classe: Startup.cs e o metodo: ConfigureServices para adicionar o novo contexto**
 Adicionar estes namespace:
-``` 
+```csharp 
 using Sisdem.Context;
 using Microsoft.EntityFrameworkCore;
 ``` 
 
-``` 
+```csharp
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
 {
