@@ -203,37 +203,40 @@ dotnet aspnet-codegenerator controller  -name PersonController --model Sisdem.Mo
 
 # Autenticação
 **1 - Passo a passo de como instalar**
+
 **[Autenticação - Rede sociais](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/)**
+
 **[Autenticação - Outros serviços](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/other-logins)**
 
 ```csharp 
-        //Class: Startup.cs 
+//Class: Startup.cs 
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-			//.....
-            //Facebook Auth
-            services.AddAuthentication().AddFacebook(facebookOptions =>
-            {
-                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
-                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
-            });
+public void ConfigureServices(IServiceCollection services)
+{
+	//.....
 
-            //Windows Auth
-            services.AddAuthentication().AddMicrosoftAccount(microsoftOptions =>
-            {
-                microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ApplicationId"];
-                microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:Password"];
-            });
+    //Facebook Auth
+    services.AddAuthentication().AddFacebook(facebookOptions =>
+    {
+        facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+        facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+    });
 
-            //Google Auth
-            services.AddAuthentication().AddGoogle(googleOptions =>
-            {
-                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
-                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-            });
+    //Windows Auth
+    services.AddAuthentication().AddMicrosoftAccount(microsoftOptions =>
+    {
+        microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ApplicationId"];
+        microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:Password"];
+    });
 
-			//.....
+    //Google Auth
+    services.AddAuthentication().AddGoogle(googleOptions =>
+    {
+        googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+        googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+    });
 
-        }
+	//.....
+
+}
 ```
