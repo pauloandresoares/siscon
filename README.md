@@ -13,7 +13,7 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Tools
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 ```
 Caso no arquivo do projeto .csproj não tiver a linha abaixo, adiciona-la:
-```
+```xml
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
@@ -72,7 +72,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools.DotNe
 ```
 
 Abra o arquivo <Nome do Projeto>.csproj e adicione a seguinte linha:
-```
+```xml
 <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
 ```
 Para ficar dessa forma:
@@ -114,9 +114,8 @@ namespace Sisdem.Models
 
 
 **10 - Criar o diretorio Context e modificar o <Nome do Projeto>.csproj:**
-``` 
-// adicionando uma nova tag ItemGroup:
-
+Adicionando uma nova tag ItemGroup:
+```xml 
   <!-- Checar a real necessidade da linha abaixo: -->
    <ItemGroup>
       <folder Include="/Models" />
